@@ -1,4 +1,4 @@
-module SlackMathbot
+module SlackTadobot
   module Commands
     class Help < SlackRubyBot::Commands::Base
       HELP = <<-HELP.freeze

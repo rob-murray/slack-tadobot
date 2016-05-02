@@ -1,4 +1,4 @@
-module SlackMathbot
+module SlackTadobot
   module Presenters
     class TadoWeather
       include ::TadoApi::Requestable

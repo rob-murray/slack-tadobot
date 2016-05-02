@@ -31,7 +31,7 @@ All requests are sent over HTTPS. Keep your username and password private!
 
 Create a new Bot Integration under [services/new/bot](http://slack.com/services/new/bot). On the next screen, note the API token.
 
-### Deploy Slack-Mathbot
+### Deploy Slack-Tadobot
 
 1. Create a new Heroku app
 2. Git clone & deploy this repo to your new app
