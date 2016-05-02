@@ -19,5 +19,19 @@ module TadoApi
     def formatted_scale
       scale == :celsius ? "°C" : "°F"
     end
+
+    def to_params
+      if scale == :celsius
+        { celsius: value }
+      else
+        { fahrenheit: to_fahrenheit }
+      end
+    end
+
+    private
+
+    def to_fahrenheit
+      (value * 1.8) + 32
+    end
   end
 end

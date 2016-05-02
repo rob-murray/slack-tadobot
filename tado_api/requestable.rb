@@ -2,6 +2,7 @@ require "tado_api/client"
 
 module TadoApi
   module Requestable
+    # TODO remove this.
     def client
       @client ||= Client.new(username: username, password: password, home_id: home_id)
     end

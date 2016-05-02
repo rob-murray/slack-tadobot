@@ -64,6 +64,14 @@ Show the current status of your Tado.
 
 Show the current weather at the Tado device location.
 
+`tadobot set manual on {temperature}`
+
+Set the heating manual override on to a specific temperature.
+
+`tadobot set manual off`
+
+Set the heating manual override off.
+
 `tadobot`
 
 Shows tadobot version and links.
