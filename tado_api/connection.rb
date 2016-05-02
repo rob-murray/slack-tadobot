@@ -16,6 +16,14 @@ module TadoApi
       request :post, url, params, headers
     end
 
+    def put(url, params = {}, headers = {})
+      request :put, url, params, headers
+    end
+
+    def delete(url, params = {}, headers = {})
+      request :delete, url, params, headers
+    end
+
     private
 
     attr_reader :configuration

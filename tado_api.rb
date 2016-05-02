@@ -38,6 +38,14 @@ module TadoApi
     yield configuration
   end
 
+  def self.build_from_env
+    username = ENV.fetch("TADO_USERNAME")
+    password = ENV.fetch("TADO_PASSWORD")
+    home_id = ENV.fetch("TADO_HOME_ID")
+
+    create_client(username: username, password: password, home_id: home_id)
+  end
+
   # TODO
   def self.create_client(username:, password:, home_id:)
     @client ||= Client.new(username: username, password: password, home_id: home_id)
