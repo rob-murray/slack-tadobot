@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module SlackTadobot
   module Presenters
     class TadoStatus
@@ -30,7 +31,7 @@ module SlackTadobot
       private
 
       def response
-        response ||= client.current_state
+        @response ||= client.current_state
       end
     end
   end

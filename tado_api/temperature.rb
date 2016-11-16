@@ -1,10 +1,15 @@
+# frozen_string_literal: true
 module TadoApi
   class Temperature
     attr_reader :float_value, :scale
 
     def initialize(raw_value:, scale: :celsius)
       @raw_value = raw_value
-      @float_value = @raw_value.to_f rescue 0.0
+      @float_value = begin
+                       @raw_value.to_f
+                     rescue
+                       0.0
+                     end
       @scale = scale
     end
 

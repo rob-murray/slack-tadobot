@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require "tado_api/error_response"
 require "tado_api/status_response"
 require "tado_api/success_response"
@@ -6,7 +7,9 @@ require "tado_api/weather_response"
 module TadoApi
   class Client
     def initialize(username:, password:, home_id:)
-      @username, @password, @home_id = username, password, home_id
+      @username = username
+      @password = password
+      @home_id = home_id
     end
 
     def current_state
@@ -52,7 +55,7 @@ module TadoApi
     def enable_manual_mode(temperature_request)
       serialized_auth_params = parameterize(auth_params)
       raw_response = connection.put "/api/v2/homes/#{home_id}/zones/1/overlay?#{serialized_auth_params}",
-        manual_mode_request_params(temperature_request)
+                                    manual_mode_request_params(temperature_request)
       if raw_response.success?
         SuccessResponse.new(raw_response.body)
       else
@@ -83,7 +86,7 @@ module TadoApi
     end
 
     def parameterize(params)
-      URI.escape( params.map{ |k,v| "#{k}=#{v}" }.join('&') )
+      URI.escape(params.map { |k, v| "#{k}=#{v}" }.join("&"))
     end
   end
 end

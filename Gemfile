@@ -1,8 +1,9 @@
+# frozen_string_literal: true
 source "https://rubygems.org"
 
-ruby "2.3.0"
+ruby "2.3.1"
 
-gem "slack-ruby-bot", github: "dblock/slack-ruby-bot" # TODO fix this at a version
+gem "slack-ruby-bot", github: "dblock/slack-ruby-bot" # TODO: fix this at a version
 gem "celluloid-io"
 
 gem "sinatra"

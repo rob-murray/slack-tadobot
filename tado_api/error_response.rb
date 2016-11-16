@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module TadoApi
   class ErrorResponse
     def initialize(response)

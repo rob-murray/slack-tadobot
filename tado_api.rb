@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require "tado_api/client"
 require "tado_api/configuration"
 require "tado_api/connection"

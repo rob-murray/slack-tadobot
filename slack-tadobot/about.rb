@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 require_relative "tag_line"
 
 module SlackTadobot
-  ABOUT = <<-ABOUT.freeze
+  ABOUT = <<-ABOUT
     #{SlackTadobot::TAG_LINE}
     https://github.com/rob-murray/slack-tadobot
     #{SlackTadobot::VERSION}

@@ -1,5 +1,6 @@
-require 'faraday_middleware'
-require 'faraday_middleware/multi_json'
+# frozen_string_literal: true
+require "faraday_middleware"
+require "faraday_middleware/multi_json"
 
 module TadoApi
   # @api private
@@ -48,8 +49,8 @@ module TadoApi
 
     def default_headers
       {
-        content_type: 'application/json',
-        accept:       'application/json',
+        content_type: "application/json",
+        accept:       "application/json"
       }
     end
   end

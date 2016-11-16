@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module SlackTadobot
   module Presenters
     class TadoWeather
@@ -13,7 +14,7 @@ module SlackTadobot
 
       def condition_gif_tag
         if response.success?
-          # TODO use the condition code
+          # TODO: use the condition code
           "weather"
         else
           "fail"
@@ -31,7 +32,7 @@ module SlackTadobot
       private
 
       def response
-        response ||= client.current_weather
+        @response ||= client.current_weather
       end
     end
   end
